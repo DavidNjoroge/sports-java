@@ -17,10 +17,10 @@ public class Team implements Serializable {
     private Long id;
 
     @NotBlank
-    private String name;
+    private String teamName;
 
     @NotBlank
-    private String continent;
+    private String confederation;
 
 //    @NotBlank
     @OneToMany(mappedBy = "team")
@@ -34,27 +34,27 @@ public class Team implements Serializable {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getContinent() {
-        return continent;
-    }
-
-    public void setContinent(String continent) {
-        this.continent = continent;
-    }
-
     public List<Player> getPlayers() {
         return players;
     }
 
     public void setPlayers(List<Player> players) {
         this.players = players;
+    }
+
+    public String getTeamName() {
+        return teamName;
+    }
+
+    public void setTeamName(String teamName) {
+        this.teamName = teamName;
+    }
+
+    public String getConfederation() {
+        return confederation;
+    }
+
+    public void setConfederation(String confederation) {
+        this.confederation = confederation;
     }
 }
