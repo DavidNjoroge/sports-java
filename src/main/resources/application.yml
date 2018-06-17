@@ -1,6 +1,11 @@
-#spring.boot.admin.client.url: "http://localhost:8000"
-##management.endpoints.web.exposure.include: "*"
-##spring.boot.admin.url: http://localhost:1111
-##spring.boot.admin.username: admin
-##spring.boot.admin.password: admin
-##
+spring:
+    datasource:
+        driver-class-name: com.mysql.jdbc.Driver
+        url: jdbc:mysql://davy.co.ke/davycoke_world_cup
+        username: davycoke_test
+        password: davycoke_test
+        jdbcUrl: ${spring.datasource.url}
+    jpa:
+        database-platform: org.hibernate.dialect.MySQL5Dialect)
+        hibernate:
+          ddl-auto: update
