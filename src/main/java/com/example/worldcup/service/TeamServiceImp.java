@@ -13,15 +13,15 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
-@Service
-public class TeamServiceImp implements TeamService {
-    @Autowired
-    TeamRepository teamRepository;
-
-    @Override
-    public List<Team> findAllTeams() {
-        return teamRepository.findAll();
-    }
+//@Service
+//public class TeamServiceImp implements TeamService {
+//    @Autowired
+//    TeamRepository teamRepository;
+////
+//    @Override
+//    public List<Team> findAllTeams() {
+//        return teamRepository.findAll();
+//    }
 
 //    @Override
 //    public void bulkCreate (Long voucherDefinition, int count, int amount, LocalDateTime startDate, LocalDateTime endDate, Writer writer) throws IOException {
@@ -52,4 +52,4 @@ public class TeamServiceImp implements TeamService {
 //        csvWriter.flush();
 //    }
 
-}
+//}
