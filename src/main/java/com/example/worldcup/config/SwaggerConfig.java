@@ -21,6 +21,8 @@ import static springfox.documentation.builders.PathSelectors.regex;
 //                .build();
 //    }
 //}
+
+
 @Configuration
 @EnableSwagger2
 public class SwaggerConfig {
@@ -33,6 +35,7 @@ public class SwaggerConfig {
                 .build();
     }
 }
+
 //    @Bean
 //    public Docket api ( ) {
 //        return new Docket ( DocumentationType.SWAGGER_2 )

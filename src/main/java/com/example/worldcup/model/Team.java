@@ -29,9 +29,9 @@ public class Team implements Serializable {
     @OneToMany(mappedBy = "team")
     public List<Player> players;
 
-    @ManyToOne
-    @JoinColumn(name="stage_id")
-    private Stage stage;
+//    @ManyToOne
+//    @JoinColumn(name="stage_id")
+//    private Stage stage;
 
     public Long getId ( ) {
         return id;
@@ -64,13 +64,13 @@ public class Team implements Serializable {
     public void setPlayers (List<Player> players) {
         this.players = players;
     }
-
-    public Stage getStage ( ) {
-        return stage;
-    }
-
-    public void setStage (Stage stage) {
-        this.stage = stage;
-    }
+//
+//    public Stage getStage ( ) {
+//        return stage;
+//    }
+//
+//    public void setStage (Stage stage) {
+//        this.stage = stage;
+//    }
 }
 

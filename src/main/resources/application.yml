@@ -1,14 +1,18 @@
-#spring:
+# spring:
 #    datasource:
 #        driver-class-name: com.mysql.jdbc.Driver
-#        url: jdbc:mysql://davy.co.ke/davycoke_world_cup
-#        username: davycoke_test
-#        password: davycoke_test
+#        url: jdbc:mysql://localhost:3306/world_cup
+#        username: root
+#        password: chutha
 #        jdbcUrl: ${spring.datasource.url}
 #    jpa:
-#        database-platform: org.hibernate.dialect.MySQL5Dialect)
+#        database-platform: org.hibernate.dialect.MySQL5Dialect
 #        hibernate:
 #          ddl-auto: update
+
+# spring.datasource.jdbcUrl=${spring.datasource.url}
+
+#
 spring:
   jpa:
     database: POSTGRESQL
@@ -17,7 +21,24 @@ spring:
       ddl-auto: update
   datasource:
     platform: postgres
-    url: jdbc:postgresql://localhost:5432/mydb
-#    username: foo
-#    password: bar
+    url: jdbc:postgresql://ec2-54-75-227-92.eu-west-1.compute.amazonaws.com:5432/dfe78urtja574b?sslmode=require
+    username: mdbduhdwtpxeew
+    password: 4ca0fbc46f50323c2f4724d3b914b9eef62029303a649da3e7781b3596faa8d0
+    jdbcUrl: ${spring.datasource.url}
     driverClassName: org.postgresql.Driver
+
+
+
+
+
+#spring:
+#    datasource:
+#        driver-class-name: com.mysql.jdbc.Driver
+#        url: jdbc:mysql://davy.co.ke/davycoke_world_cup
+#        username: davycoke_test
+#        password: davycoke_test
+#        jdbcUrl: ${spring.datasource.url}
+#    jpa:
+#        database-platform: org.hibernate.dialect.MySQL5Dialect
+#        hibernate:
+#          ddl-auto: update
