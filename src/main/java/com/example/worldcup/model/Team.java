@@ -1,5 +1,7 @@
 package com.example.worldcup.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonView;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.*;
@@ -17,44 +19,58 @@ public class Team implements Serializable {
     private Long id;
 
     @NotBlank
-    private String name;
+    private String teamName;
 
     @NotBlank
-    private String continent;
+    private String confederation;
 
 //    @NotBlank
+    @JsonIgnore
     @OneToMany(mappedBy = "team")
-    private List<Player> players;
+    public List<Player> players;
 
-    public Long getId() {
+//    @ManyToOne
+//    @JoinColumn(name="stage_id")
+//    private Stage stage;
+
+    public Long getId ( ) {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId (Long id) {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getTeamName ( ) {
+        return teamName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setTeamName (String teamName) {
+        this.teamName = teamName;
     }
 
-    public String getContinent() {
-        return continent;
+    public String getConfederation ( ) {
+        return confederation;
     }
 
-    public void setContinent(String continent) {
-        this.continent = continent;
+    public void setConfederation (String confederation) {
+        this.confederation = confederation;
     }
 
-    public List<Player> getPlayers() {
+    public List<Player> getPlayers ( ) {
         return players;
     }
 
-    public void setPlayers(List<Player> players) {
+    public void setPlayers (List<Player> players) {
         this.players = players;
     }
+//
+//    public Stage getStage ( ) {
+//        return stage;
+//    }
+//
+//    public void setStage (Stage stage) {
+//        this.stage = stage;
+//    }
 }
+
